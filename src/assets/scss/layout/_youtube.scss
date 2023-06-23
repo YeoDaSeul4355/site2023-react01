@@ -58,24 +58,28 @@
     }
 }
 .youtube__tag {
-    ul {
+    div {
         display: flex;
         justify-content: center;
         margin-top: 100px;
         margin-bottom: 50px;
-        li {
-            a {
-                border: 1px solid #8b99ad;
-                padding: 10px 20px;
-                margin: 0 10px;
-                color: #8b99ad;
+        button {
+            cursor: pointer;
+            border: 1px solid #8b99ad;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #8b99ad;
+            transition: all 0.5s;
+            &:hover {
+                border-radius: 30px;
+                color: #fff;
+                background-color: #8b99ad;
                 transition: all 0.5s;
-                &:hover {
-                    border-radius: 30px;
-                    color: #fff;
-                    background-color: #8b99ad;
-                    transition: all 0.5s;
-                }
+            }
+            &.active {
+                color: #fff;
+                background-color: #8b99ad;
+                transition: all 0.5s;
             }
         }
     }

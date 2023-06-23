@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-const YoutubeSearch = () => {
-  return <div>YoutubeSearch</div>;
+const YoutubeSearch = ({ onSearch }) => {
+  const inputRef = useRef();
+
+  const handleSearch = () => {
+    const value = inputRef.current.value;
+    if (value) onSearch(value);
+    else alert('검색어를 입력해주세요!');
+  };
+
+  const onKeyPress = event => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  const onClick = () => {
+    handleSearch();
+  };
+
+  return (
+    <div className="youtube__search container">
+      <h2 className="blind">검색하기</h2>
+      <input
+        type="search"
+        ref={inputRef}
+        onKeyPress={onKeyPress}
+        placeholder="영상을 검색하세요!"
+      />
+      <button type="submit" onClick={onClick} className="button-yellow">
+        검색하기
+      </button>
+    </div>
+  );
 };
 
 export default YoutubeSearch;

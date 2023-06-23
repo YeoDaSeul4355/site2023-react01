@@ -48,3 +48,26 @@
         }
     }
 }
+
+.intro__page {
+    .intro__box  {
+        display: flex;
+        justify-content: space-between;
+    }
+    .intro__box > div {
+        width: 30.3333%;
+        img {
+            width: 100%;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.025);
+                transition: all 0.3s;
+            }
+        }
+        p { 
+            padding: 20px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+}

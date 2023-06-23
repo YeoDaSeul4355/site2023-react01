@@ -38,21 +38,6 @@
     }
 }
 
-// unsplash__page
-.unsplash__cont {
-    ul {
-        column-count: 4;
-        li {
-            margin-bottom: 20px;
-            a {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-
 // unsplash__search
 .unsplash__search {
     text-align: center;
@@ -69,3 +54,80 @@
         @include border(50px);
     }
 }
+// unsplash__tag
+.unsplash__tag {
+    div {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        button {
+            cursor: pointer;
+            border: 1px solid #8b99ad;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #8b99ad;
+            transition: all 0.5s;
+            &:hover {
+                border-radius: 30px;
+                color: #fff;
+                background-color: #8b99ad;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+// unsplash__page
+.unsplash__cont {
+    ul {
+        column-count: 4;
+        li {
+            margin-bottom: 20px;
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.unsplash__slider { 
+    
+    .swiper {
+        // backface-visibility: hidden;
+        height: 600px;
+        
+        .swiper-horizontal > .swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+          bottom: -70px !important;
+        }
+    
+        .swiper-slide {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 18px;
+          font-size: 22px;
+          font-weight: bold;
+          color: #fff;
+          height: 100%;
+    
+          img {
+            display: block;
+            width: 350px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+    
+        }
+      }
+      .mySwiper {
+        width: 400px;
+        background-color: #fff;
+      }
+}
+
+  

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const youtubeTag = [
+const cardTag = [
   { name: '현대 미술' },
   { name: '서양화' },
   { name: '동양화' },
@@ -9,14 +9,14 @@ const youtubeTag = [
   { name: '일러스트' },
 ];
 
-const YoutubeTag = ({ onSearch }) => {
+const CardTag = ({ onSearch }) => {
   function btnClick(e) {
     onSearch(e.target.innerText);
   }
   return (
-    <div class="youtube__tag">
+    <div class="card__tag">
       <div>
-        {youtubeTag.map((tag, index) => (
+        {cardTag.map((tag, index) => (
           <button onClick={btnClick} key={index}>
             {tag.name}
           </button>
@@ -26,4 +26,4 @@ const YoutubeTag = ({ onSearch }) => {
   );
 };
 
-export default YoutubeTag;
+export default CardTag;

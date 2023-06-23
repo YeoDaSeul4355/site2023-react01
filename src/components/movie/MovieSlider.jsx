@@ -1,17 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+  Autoplay,
+} from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-// import 'swiper/css/bundel'
+SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 const MovieImg = ({ movie }) => {
   return (
-    <Link to={`https://www.themoviedb.org/movie/${movie.id}`}>
+    <Link to={`https://www.themoviedb.org/movie/${movie.id}`} target="_blank">
       <img
-        src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/w1280/${movie.poster_path}`}
         alt={movie.title}
       />
     </Link>
@@ -24,16 +30,22 @@ const MovieSlider = ({ movies }) => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
-        spaceBetween={30}
+        slidesPerView={'5'}
+        initialSlide="3"
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: true,
+          delay: 5000,
+          disableOnInteraction: false,
         }}
-        loop={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         pagination={true}
-        navigation={true}
-        modules={[Autoplay, Navigation, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="mySwiper"
       >
         {movies.map((movie, index) => (
           <SwiperSlide>

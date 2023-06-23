@@ -13,7 +13,16 @@ const MoviePage = () => {
   // 서치
   const search = async query => {
     await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=86951144e4cb4c72a22189f65fc8c04b&limit=30&query=${query}`,
+      `https://api.themoviedb.org/3/search/movie?api_key=86951144e4cb4c72a22189f65fc8c04b&limit=30`,
+    )
+      .then(response => response.json())
+      .then(result => setMovies(result.results))
+      .catch(error => console.log(error));
+  };
+
+  const tags = async query => {
+    await fetch(
+      `${query}?api_key=86951144e4cb4c72a22189f65fc8c04b&language=ko-KR`,
     )
       .then(response => response.json())
       .then(result => setMovies(result.results))
@@ -44,7 +53,7 @@ const MoviePage = () => {
         <ContTitle title="movie" />
         <MovieSlider movies={movies} />
         <MovieSearch onSearch={search} />
-        <MovieTag />
+        <MovieTag onSearch={tags} />
         <MovieCont movies={movies} />
       </Contents>
     </>
