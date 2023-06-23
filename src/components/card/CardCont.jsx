@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 const cardTag = {
   menu1: '1800년대',
   menu2: '1900년대',
-  menu3: '2000년대',
+  menu3: '2000년대 ',
 };
 
 const cardText = [
