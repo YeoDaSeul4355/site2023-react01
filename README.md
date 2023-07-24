@@ -1,4 +1,4 @@
-# 🎨 React를 활용한 모던 아트 사이트
+# 📽️ React와 YoutubeAPI를 활용한 유튜브 사이트
 
 ![youtubeMain](https://github.com/YeoDaSeul4355/site2023-youtube01/assets/125419623/a4e8608e-e6bc-4a44-bdfe-ad6080f51955)
 
