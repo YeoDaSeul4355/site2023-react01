@@ -1,31 +1,42 @@
 # 🎨 React를 활용한 모던 아트 사이트
 
-
-
+![reactMain](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/8c95aecd-cd25-4fbd-a7f6-f98ab9ccddaf)
 
 RapidAPI에서 제공하는 자동차 API를 활용하여 카탈로그 형식으로 제작한 사이트입니다.
-> View Demo : https://car-showcase-jjul.netlify.app/
-
-![car_sub](https://github.com/YeoDaSeul4355/car_showcase/assets/125419623/5ccee91d-88a0-466f-8a9a-692f40892deb)
+> View Site : https://site2023-react-jjul.netlify.app/
 
 ## 👋 소개
-* 자동차 카탈로그: 이 프로젝트에는 사용자가 다양한 자동차 모델을 살펴볼 수 있는 포괄적인 자동차 카탈로그가 포함되어 있습니다. 카탈로그를 통해 사용자는 제조사, 모델, 연료 유형 및 연도를 포함한 다양한 기준에 따라 자동차를 필터링할 수 있습니다.
-* 필터링 기능: 사용자는 제조업체, 모델, 연료 유형 및 연도에 대한 특정 옵션을 선택하여 편리하게 자동차 카탈로그를 필터링할 수 있습니다.
-* 차량 세부 정보: 카탈로그에서 차량 카드를 클릭하면 선택한 차량에 대한 자세한 정보가 사용자에게 제공됩니다. 사용자는 제조업체의 세부 정보를 탐색하고 다양한 각도에서 차량의 사진을 볼 수 있어 차량의 디자인과 특징을 포괄적으로 이해할 수 있습니다.(자동차 이미지 API 발급 오류로 인해 세부 이미지는 동일한 이미지로 대체)
+React를 기반으로 구축된 현대 미술 작품과 아티스트를 소개하는 플랫폼입니다.이 사이트는 컴포넌트 기반 아키텍처를 활용하여 모듈화된 디자인과 사용자 친화적인 인터페이스를 제공합니다.
+Restful API 활용하여 다양한 현대 미술 작품과 아티스트 정보를 외부 API로부터 불러와서 동적으로 표시합니다.(Youtube API, Unsplash API, Movie API 등등) 이 프로젝트에서 Component 기반의 모듈, 그리고 fetch를 이용해 API의 정보를 받아오는 방법과 React Hook을 사용해 상태를 관리하는 방법을 학습하였습니다.
+
 
 ## 🔧 사용 스택 
-* React
-* Next.js
-* TypeScript
-* TailwindCSS
-* PostCSS
+* React: JavaScript 라이브러리로 사용자 인터페이스를 구축하기 위해 사용됩니다.
+* react-router-dom: React 애플리케이션의 클라이언트 사이드 라우팅을 관리하는 라이브러리입니다.
+* BrowserRouter: react-router-dom에서 제공하는 라우터 구성 요소 중 하나로, HTML5 History API를 사용하여 브라우저의 주소 표시줄을 관리하고, 라우팅을 처리합니다.
+* Route: react-router-dom에서 제공하는 라우터 구성 요소 중 하나로, 경로에 따라 특정 컴포넌트를 렌더링합니다.
+* Routes: react-router-dom에서 제공하는 라우터 구성 요소로, 여러 Route를 그룹화하고, 라우팅 구성을 선언적으로 표현할 수 있도록 도와줍니다.
+* fetch: 네트워크 요청을 보내기 위해 사용되는 자바스크립트 함수로, 비동기적으로 데이터를 가져오기 위해 사용됩니다. 해당 코드에서는 영화 데이터를 API로부터 가져오는데 사용되었습니다.
+* useState: React 훅 중 하나로, 함수형 컴포넌트에서 상태(state)를 사용할 수 있게 해줍니다. 해당 코드에서는 영화 데이터를 상태로 관리하기 위해 사용되었습니다.
+* useEffect: React 훅 중 하나로, 컴포넌트의 렌더링 이후에 실행되는 사이드 이펙트를 처리할 수 있도록 도와줍니다. 해당 코드에서는 초기 렌더링 시에 API를 호출하여 영화 데이터를 가져오는데 사용되었습니다.
+* useRef: React 훅 중 하나로, 함수형 컴포넌트에서 DOM 요소에 접근하기 위해 사용됩니다. 해당 코드에서는 검색어 입력란(input 요소)에 접근하기 위해 사용되었습니다.
+
 
 ## ✍️ 구현 내역
-* Next.js 13 앱 라우터 및 서버 측 렌더링 사용
-* 고급 검색 기능 구현
-* 필터링 기능 생성
-* 메타데이터 및 SEO 최적화
-* 사용자 정의 필터, 콤보 상자 및 모달 요소 만들기
+
+* swiper를 활용한 이미지 슬라이드
+* router기능을 활용한 페이지
+* 탭 메뉴로 구성된 시대별 유명 작품
+* Youtube 검색, 태그 기능
+* Unsplash 랜덤 이미지 슬라이드, 검색, 태그 기능
+* Movie 이미지 슬라이드, 검색, 태그 기능
+<br><br>
+
+## 📸 상세페이지
+![reactIntro](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/e0add7b9-4e13-4c28-b567-02d02949fbea)<br><br>
+![reactYoutube](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/255bbe78-a773-4607-91fc-4e2b0e773eb9)<br><br>
+![reactUnsplash](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/fdbffbb2-d0d2-4355-93a1-f78f837f9d9e)<br><br>
+![reactMovie](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/2539a58c-559e-48d6-953a-06456a275b55)
 
 ## ⚙️ 개발 환경 프로젝트 실행 방법
 
@@ -33,7 +44,7 @@ RapidAPI에서 제공하는 자동차 API를 활용하여 카탈로그 형식으
 레포지토리 클론
 
 ```c
-git clone https://github.com/YeoDaSeul4355/cars_showcase.git
+git clone https://github.com/YeoDaSeul4355/site2023-react01.git
 ```
 
 <b>Step 2: </b><br>
@@ -43,17 +54,9 @@ git clone https://github.com/YeoDaSeul4355/cars_showcase.git
 npm install
 ```
 
-<b>Step 3: </b><br>
-환경 변수 세팅
-
-```c
-NEXT_PUBLIC_RAPID_API_KEY
-```
-( <a href="https://api-ninjas.com/api/cars">API-Ninjas</a> 에서 API Key 발급 필요)
-
 <b>Step 4: </b><br>
 프로젝트 시작
 
 ```c
-npm run dev
+npm start
 ```
