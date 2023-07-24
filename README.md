@@ -2,7 +2,6 @@
 
 ![reactMain](https://github.com/YeoDaSeul4355/site2023-react01/assets/125419623/8c95aecd-cd25-4fbd-a7f6-f98ab9ccddaf)
 
-RapidAPI에서 제공하는 자동차 API를 활용하여 카탈로그 형식으로 제작한 사이트입니다.
 > View Site : https://site2023-react-jjul.netlify.app/
 
 ## 👋 소개
